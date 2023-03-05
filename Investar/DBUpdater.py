@@ -13,12 +13,12 @@ class DBUpdater:
         """생성자 : DB 연결 및 종목코드 딕셔너리 생성"""
         self.dbm = DBman()
         self.conn = self.dbm.get_connection()
-        self.logger = sl("DBUpdater")
+        self.logger = sl(__name__).get_logger()
 
     def __del__(self):
         """소멸자 : DB 연결 해제"""
-        self.conn.rollback()
-        self.conn.close()
+        # self.conn.rollback()
+        # self.conn.close()
 
     def update_comp_info(self):
         self.logger.info('update_comp_info : DB에 저장된 company_info의 종목 정보를 딕셔너리에 저장')

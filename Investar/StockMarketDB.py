@@ -8,7 +8,7 @@ class MarketDB:
     def __init__(self, dbm, logger):
         self.dbm = DBman()
         # self.conn = self.dbm.get_connection()
-        self.logger = sl("MarketDB")
+        self.logger = sl(__name__).get_logger()
 
     # def __del__(self):
     #     """소멸자 : DB 연결 해제"""

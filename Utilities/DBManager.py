@@ -5,7 +5,7 @@ from sqlalchemy import create_engine, text
 class DBman:
     def __init__(self):
         from Utilities.UsrLogger import stockLogger as sl
-        self.logger = sl('DBman')
+        self.logger = sl(__name__).get_logger()
         self.prop = cu('./config.ini')
         self.host = self.prop.get_property('DB', 'hostname')
         self.dbname = self.prop.get_property('DB', 'dbname')
