@@ -74,27 +74,37 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'sqllite': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    },
-    'ps_stock': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'UIAdmin',
         'USER': 'stockanal',
         'PASSWORD': 'stockanal',
         'HOST': 'localhost',
         'PORT': '5433',
-    },
-    'ps_login': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'stockanal',
-        'USER': 'stockanal',
-        'PASSWORD': 'stockanal',
-        'HOST': 'localhost',
-        'PORT': '5433',
     }
 }
+# DATABASES = {
+#     'sqllite': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     },
+#     'ps_stock': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'UIAdmin',
+#         'USER': 'stockanal',
+#         'PASSWORD': 'stockanal',
+#         'HOST': 'localhost',
+#         'PORT': '5433',
+#     },
+#     'ps_login': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'stockanal',
+#         'USER': 'stockanal',
+#         'PASSWORD': 'stockanal',
+#         'HOST': 'localhost',
+#         'PORT': '5433',
+#     }
+# }
 
 
 # Password validation
