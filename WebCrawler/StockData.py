@@ -7,7 +7,7 @@ from Utilities.UsrLogger import stockLogger as sl
 
 class anlDataMng:
     def __init__(self):
-        self.logger = sl("anlDataMng")
+        self.logger = sl(__name__).get_logger()
         self.cu = commonUtilities('./config.ini')
 
     def getItemList(self):

@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <!-- Header -->
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <h1 id="site-name"><a class="navbar-brand" href="#">Mysite</a></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+                <strong>{{ name }}님</strong>환영합니다.
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-link active" class="nav-item">
+                        <a href="/">사이트 보기</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="...">비밀번호 변경</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login:logout' %}">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- END Header -->
+        <div class="main" id="main">
+            <p>
+                <h1> {{ name }} Hello welcome !! </h1>
+
+            </p>
+        </div>
+</body>
+</html>
